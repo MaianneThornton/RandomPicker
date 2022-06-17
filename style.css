@@ -3,63 +3,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #7858A6;
-    font-family: 'Roboto', sans-serif;
+  background-color: #7858a6;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Fascinate', cursive;
+  color: #fff;
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+h3 {
+  color: #fff;
+  margin: 10px 0 20px;
+  text-align: center;
+  letter-spacing: 0.025rem;
+  white-space: nowrap;
+}
+
+.container {
+  width: 500px;
+}
+
+#textarea {
+  background-color: #f0f8ff;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 100px;
+  font-family: inherit;
+  padding: 10px;
+  margin: 0 0 20px;
+  font-size: 16px;
+}
+
+.tag {
+  background-color: #f0932b;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin: 0 5px 10px 0;
+  font-size: 14px;
+  display: inline-block;
+  letter-spacing: 0.1rem;
+}
+
+.tag.highlight {
+  background-color: #371b58;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 800px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .container {
+    /* width: 80vw; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
+  }
 }
+@media only screen and (min-width: 1080px) {
+  body {
+    font-size: 1.2rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-h1 {
-    font-family: 'Fascinate', cursive;
-    color: #fff;
-    text-align: center;
-    margin: 10px 0 20px;
-}
-
-h3 {
-    color: #fff;
-    margin: 10px 0 20px;
-    text-align: center;
-    letter-spacing: .025rem;
-    white-space: nowrap;
-}
-
-.container {
-    width: 500px;
-}
-
-#textarea {
-    background-color: #f0f8ff;
-    border: none;
-    display: block;
-    width: 100%;
-    height: 100px;
-    font-family: inherit;
-    padding: 10px;
-    margin: 0 0 20px;
-    font-size: 16px;
-}
-
-.tag {
-    background-color: #f0932b;
-    color: #fff;
-    border-radius: 50px;
-    padding: 10px 20px;
-    margin: 0 5px 10px 0;
-    font-size: 14px;
-    display: inline-block;
-    letter-spacing: .1rem;
-}
-
-.tag.highlight {
-    background-color: #371B58;
+  .tag {
+    font-size: 1.5rem;
+  }
 }
